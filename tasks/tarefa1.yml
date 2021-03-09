@@ -1,4 +1,4 @@
 ---
-- name: Upgrade the OS (apt-get dist-upgrade)
+- name: Upgrade the OS
   apt:
-    upgrade: dist
+    name: upgrade

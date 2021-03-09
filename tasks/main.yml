@@ -1,5 +1,6 @@
 ---
 # tasks file for project
+- include: tarefa2.yml
 - include: tarefa1.yml
 
 

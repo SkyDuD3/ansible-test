@@ -1,4 +1,4 @@
 ---
-    - name: Default IPv4 addresses
-      debug: msg="{{ ansible_default_ipv4.address }}"
-
+- name: Update the OS
+  apt:
+   name: update
