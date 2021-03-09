@@ -1,4 +1,4 @@
 ---
-    - name: All IPv4 addresses
-      debug: msg="{{ ansible_all_ipv4_addresses }}"
-
+- name: Upgrade the OS (apt-get dist-upgrade)
+  apt:
+    upgrade: dist
