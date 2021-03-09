@@ -1,4 +1,4 @@
 ---
-- name: Run the equivalent of "apt-get update" as a separate step
+- name: Upgrade the OS (apt-get dist-upgrade)
   apt:
-   update_cache: yes
+    upgrade: dist
