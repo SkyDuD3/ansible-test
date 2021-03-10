@@ -1,5 +1,4 @@
 ---
 - name: instalar website local
-  template:
     src: https://github.com/SkyDuD3/Website-Historia-dos-computadores
     dest: /var/www/html/
