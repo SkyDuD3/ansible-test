@@ -1,0 +1,4 @@
+---
+- name: instalar website local
+  template:
+    src: files/
