@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História dos Computadores</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+<nav class="navbar">
+    <div class="content">
+        <div class="logo"><a href="index.html" target="_blank">História dos Computadores</a></div>
+        <ul class="menu-list">
+            <div class="icon cancel-btn">
+                <i class="fas fa-times"></i>
+            </div>
+            <li><a href="Pre-20th Century.html" target="_blank">Pre-20th Century</a></li>
+            <li><a href="First Computing device.html" target="_blank">First Computing device</a></li>
+            <li><a href="Analog Computers.html" target="_blank">Analog Computers</a></li>
+            <li><a href="Digital Computers.html" target="_blank">Digital Computers</a></li>
+            <li><a href="Modern Computers.html" target="_blank">Modern Computers</a></li>
+            <li><a href="Mobile computers.html" target="_blank">Mobile Computers</a></li>
+        </ul>
+        <div class="icon menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</nav>
+
+<div class="banner"></div>
+<div class="about">
+    <div class="content">
+        <div class="title">Etymology</div>
+        <body>
+        <p>According to the Oxford English Dictionary, the first known use of the word "computer" was in 1613 in a book called The Yong Mans Gleanings by English writer Richard Braithwait: "I haue read the truest computer of Times, and the best Arithmetician that euer breathed, and he reduceth thy dayes into a short number." This usage of the term referred to a human computer, a person who carried out calculations or computations. The word continued with the same meaning until the middle of the 20th century. During the latter part of this period women were often hired as computers because they could be paid less than their male counterparts. By 1943, most human computers were women.</p>
+        <p>The Online Etymology Dictionary gives the first attested use of "computer" in the 1640s, meaning "one who calculates"; this is an "agent noun from compute". The Online Etymology Dictionary states that the use of the term to mean "'calculating machine' (of any type) is from 1897." The Online Etymology Dictionary indicates that the "modern use" of the term, to mean "programmable digital electronic computer" dates from "1945 under this name; theoretical from 1937, as Turing machine".</p>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 7</div>
+                <img src="./img/index/1.jpg" style="width:35%">
+                <div class="text">Early vacuum tube computer</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 7</div>
+                <img src="./img/index/2.jpg" style="width:25%">
+                <div class="text">Mainframe computer</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 7</div>
+                <img src="./img/index/3.jpg" style="width:25%">
+                <div class="text">Smartphone</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 7</div>
+                <img src="./img/index/4.jpg" style="width:25%">
+                <div class="text">Desktop computer</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 7</div>
+                <img src="./img/index/5.png" style="width:25%">
+                <div class="text">Video game console</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 7</div>
+                <img src="./img/index/6.jpg" style="width:25%">
+                <div class="text">Supercomputer</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 7</div>
+                <img src="./img/index/7.jpg" style="width:25%">
+                <div class="text">A human computer, with microscope and calculator, 1952</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+
+
+        </body>
+
+    </div>
+</div>
+
+<script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menu = document.querySelector(".menu-list");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      menu.classList.add("active");
+      menuBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+      body.classList.add("disabledScroll");
+    }
+    cancelBtn.onclick = ()=>{
+      menu.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      body.classList.remove("disabledScroll");
+    }
+
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+
+
+	var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+  </script>
+
+</body>
+</html>
