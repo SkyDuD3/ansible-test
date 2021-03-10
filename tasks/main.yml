@@ -4,6 +4,7 @@
 - include: tarefa2.yml
 - include: tarefa3.yml
 - include: tarefa4.yml
+- include: tarefa5.yml
 
 
 
